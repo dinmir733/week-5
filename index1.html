@@ -5,15 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        header,
+        main, 
+        div,
+        section,
+        article,
+        aside,
+        footer{
+            border: 1px solid red;
+        }
+header,
+footer
+{
+    flex: 0 0 content;
+}
+.main{
+    flex-grow: 1;
+    display: flex;
+    justify-content: stretch;
+}
+body{
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+.aside{
+    width: 40vw;
+}
+.mainarticle{
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.maindiv{
+    width: 35%;
+    height: 10%
+    
+}
+.maindivs{
+    width: 85%;
+    height: 10%
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.fsection{
+    flex-basis: 100px;
+    margin: 10px;
+}
+
+    </style>
 </head>
 <body>
-    <header></header>
-    <main>
-        <div></div>
-        <div></div>
-        <div></div>
-        <aside></aside>
+    <header class="header"><p style="text-align: center;">Header</p></header>
+    <main class="main">
+        <article class="mainarticle">
+        <div class="maindiv">And 1</div>
+        <div class="maindiv">And 2</div>
+        <div class="maindivs">And 3</div>
+    </article>
+        <aside class="aside"> Aside</aside>
+    
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <section class="fsection">1</section>
+        <section class="fsection">2</section>
+        <section class="fsection">3</section>
+        <section class="fsection">4</section>
+    </footer>
 </body>
 </html>
